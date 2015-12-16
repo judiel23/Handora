@@ -1,419 +1,552 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>HANDORA| CMS</title>
-        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-        <!-- bootstrap 3.0.2 -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <!-- font Awesome -->
-        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <!-- Ionicons -->
-        <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
-        <!-- Theme style -->
-        <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Handmin</title>
+  <meta name="description" content="Angularjs, Html5, Music, Landing, 4 in 1 ui kits package" />
+  <meta name="keywords" content="AngularJS, angular, bootstrap, admin, dashboard, panel, app, charts, components,flat, responsive, layout, kit, ui, route, web, app, widgets" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-    </head>
-    <body class="skin-blue">
-        <!-- header logo: style can be found in header.less -->
-        <header class="header">
-            <a href="index.html" class="logo">
-                <!-- Add the class icon to your logo image or logo icon to add the margining -->
-                HANDORA
+  <link rel="stylesheet" href="admin/bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="admin/bower_components/animate.css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="admin/bower_components/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="admin/bower_components/simple-line-icons/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="admin/css/font.css" type="text/css" />
+  <link rel="stylesheet" href="admin/css/app.css" type="text/css" />
+
+</head>
+<body>
+<div class="app app-header-fixed  ">
+  
+  <!-- header -->
+  <header id="header" class="app-header navbar" role="menu">
+          <!-- navbar header -->
+      <div class="navbar-header bg-primary dker">
+        <button class="pull-right visible-xs dk" ui-toggle="show" target=".navbar-collapse">
+          <i class="glyphicon glyphicon-cog"></i>
+        </button>
+        <button class="pull-right visible-xs" ui-toggle="off-screen" target=".app-aside" ui-scroll="app">
+          <i class="glyphicon glyphicon-align-justify"></i>
+        </button>
+        <!-- brand -->
+        <a href="#/" class="navbar-brand text-lt">
+          <i class="fa fa-btc"></i>
+          <img src="img/logo.png" alt="." class="hide">
+          <span class="hidden-folded m-l-xs">HANDORA</span>
+        </a>
+        <!-- / brand -->
+      </div>
+      <!-- / navbar header -->
+
+      <!-- navbar collapse -->
+      <div class="collapse pos-rlt navbar-collapse box-shadow bg-primary">
+        <!-- buttons -->
+        <div class="nav navbar-nav hidden-xs">
+          <a href="#" class="btn no-shadow navbar-btn" ui-toggle="app-aside-folded" target=".app">
+            <i class="fa fa-dedent fa-fw text"></i>
+            <i class="fa fa-indent fa-fw text-active"></i>
+          </a>
+          <a href="#" class="btn no-shadow navbar-btn" ui-toggle="show" target="#aside-user">
+            <i class="icon-user fa-fw"></i>
+          </a>
+        </div>
+        <!-- / buttons -->
+
+        <!-- link and dropdown -->
+        <ul class="nav navbar-nav hidden-sm">
+          
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              <i class="fa fa-fw fa-plus visible-xs-inline-block"></i>
+              <span translate="header.navbar.new.NEW">Nuevo</span> <span class="caret"></span>
             </a>
-            <!-- Header Navbar: style can be found in header.less -->
-            <nav class="navbar navbar-static-top" role="navigation">
-                <!-- Sidebar toggle button-->
-                <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#" translate="header.navbar.new.PROJECT">Página</a></li>
+              <li>
+              <!-- Elemento Tsk
+                <a href>
+                  <span class="badge bg-info pull-right">5</span>
+                  <span translate="header.navbar.new.TASK">Task</span>
                 </a>
-                <div class="navbar-right">
-                    <ul class="nav navbar-nav">
-                        <!-- Messages: style can be found in dropdown.less-->
-                        <li class="dropdown messages-menu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-envelope"></i>
-                                <span class="label label-success">4</span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="header">You have 4 messages</li>
-                                <li>
-                                    <!-- inner menu: contains the actual data -->
-                                    <ul class="menu">
-                                        <li><!-- start message -->
-                                            <a href="#">
-                                                <div class="pull-left">
-                                                    <img src="img/avatar3.png" class="img-circle" alt="User Image"/>
-                                                </div>
-                                                <h4>
-                                                    Support Team
-                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                                                </h4>
-                                                <p>Why not buy a new awesome theme?</p>
-                                            </a>
-                                        </li><!-- end message -->
-                                        <li>
-                                            <a href="#">
-                                                <div class="pull-left">
-                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
-                                                </div>
-                                                <h4>
-                                                    AdminLTE Design Team
-                                                    <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                                                </h4>
-                                                <p>Why not buy a new awesome theme?</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="pull-left">
-                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
-                                                </div>
-                                                <h4>
-                                                    Developers
-                                                    <small><i class="fa fa-clock-o"></i> Today</small>
-                                                </h4>
-                                                <p>Why not buy a new awesome theme?</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="pull-left">
-                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
-                                                </div>
-                                                <h4>
-                                                    Sales Department
-                                                    <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                                                </h4>
-                                                <p>Why not buy a new awesome theme?</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="pull-left">
-                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
-                                                </div>
-                                                <h4>
-                                                    Reviewers
-                                                    <small><i class="fa fa-clock-o"></i> 2 days</small>
-                                                </h4>
-                                                <p>Why not buy a new awesome theme?</p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="footer"><a href="#">See All Messages</a></li>
-                            </ul>
-                        </li>
-                        <!-- Notifications: style can be found in dropdown.less -->
-                        <li class="dropdown notifications-menu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-warning"></i>
-                                <span class="label label-warning">10</span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="header">You have 10 notifications</li>
-                                <li>
-                                    <!-- inner menu: contains the actual data -->
-                                    <ul class="menu">
-                                        <li>
-                                            <a href="#">
-                                                <i class="ion ion-ios7-people info"></i> 5 new members joined today
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-warning danger"></i> Very long description here that may not fit into the page and may cause design problems
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-users warning"></i> 5 new members joined
-                                            </a>
-                                        </li>
+                -->
+              </li>
+              <li><a href translate="header.navbar.new.USER">Usuario</a></li>
+              <li class="divider"></li>
+              <li>
+                <a href>
+                  <span class="badge bg-danger pull-right">4</span>
+                  <span translate="header.navbar.new.EMAIL">Email</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- / link and dropdown -->
 
-                                        <li>
-                                            <a href="#">
-                                                <i class="ion ion-ios7-cart success"></i> 25 sales made
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="ion ion-ios7-person danger"></i> You changed your username
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="footer"><a href="#">View all</a></li>
-                            </ul>
-                        </li>
-                        <!-- Tasks: style can be found in dropdown.less -->
-                        <li class="dropdown tasks-menu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-tasks"></i>
-                                <span class="label label-danger">9</span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="header">You have 9 tasks</li>
-                                <li>
-                                    <!-- inner menu: contains the actual data -->
-                                    <ul class="menu">
-                                        <li><!-- Task item -->
-                                            <a href="#">
-                                                <h3>
-                                                    Design some buttons
-                                                    <small class="pull-right">20%</small>
-                                                </h3>
-                                                <div class="progress xs">
-                                                    <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                        <span class="sr-only">20% Complete</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li><!-- end task item -->
-                                        <li><!-- Task item -->
-                                            <a href="#">
-                                                <h3>
-                                                    Create a nice theme
-                                                    <small class="pull-right">40%</small>
-                                                </h3>
-                                                <div class="progress xs">
-                                                    <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                        <span class="sr-only">40% Complete</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li><!-- end task item -->
-                                        <li><!-- Task item -->
-                                            <a href="#">
-                                                <h3>
-                                                    Some task I need to do
-                                                    <small class="pull-right">60%</small>
-                                                </h3>
-                                                <div class="progress xs">
-                                                    <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                        <span class="sr-only">60% Complete</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li><!-- end task item -->
-                                        <li><!-- Task item -->
-                                            <a href="#">
-                                                <h3>
-                                                    Make beautiful transitions
-                                                    <small class="pull-right">80%</small>
-                                                </h3>
-                                                <div class="progress xs">
-                                                    <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                        <span class="sr-only">80% Complete</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li><!-- end task item -->
-                                    </ul>
-                                </li>
-                                <li class="footer">
-                                    <a href="#">View all tasks</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- User Account: style can be found in dropdown.less -->
-                        <li class="dropdown user user-menu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="glyphicon glyphicon-user"></i>
-                                <span>Jane Doe <i class="caret"></i></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <!-- User image -->
-                                <li class="user-header bg-light-blue">
-                                    <img src="img/avatar3.png" class="img-circle" alt="User Image" />
-                                    <p>
-                                        Jane Doe - Web Developer
-                                        <small>Member since Nov. 2012</small>
-                                    </p>
-                                </li>
-                                <!-- Menu Body -->
-                                <li class="user-body">
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Followers</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Sales</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Friends</a>
-                                    </div>
-                                </li>
-                                <!-- Menu Footer-->
-                                <li class="user-footer">
-                                    <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                    </div>
-                                    <div class="pull-right">
-                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+        <!-- search form 
+        <form class="navbar-form navbar-form-sm navbar-left shift" ui-shift="prependTo" data-target=".navbar-collapse" role="search" ng-controller="TypeaheadDemoCtrl">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" ng-model="selected" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control input-sm bg-light no-border rounded padder" placeholder="Search projects...">
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-sm bg-light rounded"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </div>
+        </form>
+        -->
+        <!-- / search form -->
+
+        <!-- nabar right -->
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              <i class="icon-bell fa-fw"></i>
+              <span class="visible-xs-inline">Notificaciones</span>
+              <span class="badge badge-sm up bg-danger pull-right-xs">2</span>
+            </a>
+            <!-- dropdown -->
+            <div class="dropdown-menu w-xl animated fadeInUp">
+              <div class="panel bg-white">
+                <div class="panel-heading b-light bg-light">
+                  <strong>Tienes <span>2</span> notificaciones</strong>
                 </div>
-            </nav>
-        </header>
-        <div class="wrapper row-offcanvas row-offcanvas-left">
-            <!-- Left side column. contains the logo and sidebar -->
-            <aside class="left-side sidebar-offcanvas">                
-                <!-- sidebar: style can be found in sidebar.less -->
-                <section class="sidebar">
-                    <!-- Sidebar user panel -->
-                    <div class="user-panel">
-                        <div class="pull-left image">
-                            <img src="img/avatar3.png" class="img-circle" alt="User Image" />
-                        </div>
-                        <div class="pull-left info">
-                            <p>Hello, Jane</p>
+                <!-- notificacion con transicion bonita -->
+                <div class="list-group">
+                  <a href class="media list-group-item">
+                    <span class="pull-left thumb-sm">
+                      <img src="img/a0.jpg" alt="..." class="img-circle">
+                    </span>
+                    <span class="media-body block m-b-none">
+                      Use awesome animate.css<br>
+                      <small class="text-muted">10 minutes ago</small>
+                    </span>
+                  </a>
+                  <a href class="media list-group-item">
+                    <span class="media-body block m-b-none">
+                      1.0 initial released<br>
+                      <small class="text-muted">1 hour ago</small>
+                    </span>
+                  </a>
+                </div>
+                <div class="panel-footer text-sm">
+                  <a href class="pull-right"><i class="fa fa-cog"></i></a>
+                  <a href="#notes" data-toggle="class:show animated fadeInRight">Ver Todas Las Notificaciones</a>
+                </div>
+              </div>
+            </div>
+            <!-- / dropdown Parte Derecha perfil-->
+          </li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle clear" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+                <img src="img/a0.jpg" alt="...">
+                <i class="on md b-white bottom"></i>
+              </span>
+              <span class="hidden-sm hidden-md">Judiel Reyes</span> <b class="caret"></b>
+            </a>
+            <!-- dropdown -->
+            <ul class="dropdown-menu animated fadeInRight w">
+              <li class="wrapper b-b m-b-sm bg-light m-t-n-xs">
+                <div>
+                  <p></p>
+                </div>
+                <div class="progress progress-xs m-b-none dker">
+                  <div class="progress-bar progress-bar-info" data-toggle="tooltip" data-original-title="50%" style="width: 50%"></div>
+                </div>
+              </li>
+              <li>
+                <a href>
+                  <span class="badge bg-danger pull-right">30%</span>
+                  
+                </a>
+              </li>
+              <li>
+                <a ui-sref="app.page.profile">Perfil</a>
+              </li>
+              <li>
+                <a ui-sref="app.docs">
+                  <span class="label bg-info pull-right">new</span>
+                  Ayuda
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a ui-sref="access.signin">Logout</a>
+              </li>
+            </ul>
+            <!-- / dropdown fin parte dercha perfil -->
+          </li>
+        </ul>
+        <!-- / navbar right -->
+      </div>
+      <!-- / navbar collapse -->
+  </header>
+  <!-- / header -->
+<!------------------------------------------------------- MENU LATERAL--------------------------------->
+  <!-- aside -->
+  <aside id="aside" class="app-aside hidden-xs bg-dark">
+          <div class="aside-wrap">
+        <div class="navi-wrap">
+          <!-- user -->
+          <div class="clearfix hidden-xs text-center hide" id="aside-user">
+            <div class="dropdown wrapper">
+              <a href="app.page.profile">
+                <span class="thumb-lg w-auto-folded avatar m-t-sm">
+                  <img src="img/a0.jpg" class="img-full" alt="...">
+                </span>
+              </a>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
+                <span class="clear">
+                  <span class="block m-t-sm">
+                    <strong class="font-bold text-lt">Judiel Reyes</strong> 
+                    <b class="caret"></b>
+                  </span>
+                  <span class="text-muted text-xs block">Administrador</span>
+                </span>
+              </a>
+              <!-- dropdown -->
+              <ul class="dropdown-menu animated fadeInRight w hidden-folded">
+                <li class="wrapper b-b m-b-sm bg-info m-t-n-xs">
+                  <span class="arrow top hidden-folded arrow-info"></span>
+                  <div>
+                    <p>300mb of 500mb used</p>
+                  </div>
+                  <div class="progress progress-xs m-b-none dker">
+                    <div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="50%" style="width: 50%"></div>
+                  </div>
+                </li>
+                <li>
+                  <a href>Ajustes</a>
+                </li>
+                <li>
+                  <a href="page_profile.html">Perfil</a>
+                </li>
+                <li>
+                  <a href>
+                    <span class="badge bg-danger pull-right">3</span>
+                    Notificaciones
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="page_signin.html">Logout</a>
+                </li>
+              </ul>
+              <!-- / dropdown -->
+            </div>
+            <div class="line dk hidden-folded"></div>
+          </div>
+          <!-- / user -->
 
-                            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-                        </div>
-                    </div>
-                    <!-- search form -->
-                    <form action="#" method="get" class="sidebar-form">
-                        <div class="input-group">
-                            <input type="text" name="q" class="form-control" placeholder="Search..."/>
-                            <span class="input-group-btn">
-                                <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
-                            </span>
-                        </div>
-                    </form>
-                    <!-- /.search form -->
-                    <!-- sidebar menu: : style can be found in sidebar.less -->
-                    <ul class="sidebar-menu">
-                        <li class="active">
-                            <a href="index.html">
-                                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages/widgets.html">
-                                <i class="fa fa-th"></i> <span>Widgets</span> <small class="badge pull-right bg-green">new</small>
-                            </a>
-                        </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-bar-chart-o"></i>
-                                <span>Charts</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> Morris</a></li>
-                                <li><a href="pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> Flot</a></li>
-                                <li><a href="pages/charts/inline.html"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
-                            </ul>
-                        </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-laptop"></i>
-                                <span>UI Elements</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="pages/UI/general.html"><i class="fa fa-angle-double-right"></i> General</a></li>
-                                <li><a href="pages/UI/icons.html"><i class="fa fa-angle-double-right"></i> Icons</a></li>
-                                <li><a href="pages/UI/buttons.html"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
-                                <li><a href="pages/UI/sliders.html"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
-                                <li><a href="pages/UI/timeline.html"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
-                            </ul>
-                        </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-edit"></i> <span>Forms</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="pages/forms/general.html"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
-                                <li><a href="pages/forms/advanced.html"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
-                                <li><a href="pages/forms/editors.html"><i class="fa fa-angle-double-right"></i> Editors</a></li>                                
-                            </ul>
-                        </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-table"></i> <span>Tables</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="pages/tables/simple.html"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
-                                <li><a href="pages/tables/data.html"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="pages/calendar.html">
-                                <i class="fa fa-calendar"></i> <span>Calendar</span>
-                                <small class="badge pull-right bg-red">3</small>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages/mailbox.html">
-                                <i class="fa fa-envelope"></i> <span>Mailbox</span>
-                                <small class="badge pull-right bg-yellow">12</small>
-                            </a>
-                        </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-folder"></i> <span>Examples</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="pages/examples/invoice.html"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
-                                <li><a href="pages/examples/login.html"><i class="fa fa-angle-double-right"></i> Login</a></li>
-                                <li><a href="pages/examples/register.html"><i class="fa fa-angle-double-right"></i> Register</a></li>
-                                <li><a href="pages/examples/lockscreen.html"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
-                                <li><a href="pages/examples/404.html"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
-                                <li><a href="pages/examples/500.html"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>                                
-                                <li><a href="pages/examples/blank.html"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-                <!-- /.sidebar -->
-            </aside>
+          <!-- nav -->
+          <nav ui-nav class="navi clearfix">
+            <ul class="nav">
+              <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                <span></span>
+              </li>
+             
+              <li>
+                <a href="mail.html">
+                  <b class="badge bg-info pull-right">9</b>
+                  <i class="glyphicon glyphicon-envelope icon text-info-lter"></i>
+                  <span class="font-bold">Email</span>
+                </a>
+              </li>
+              <li class="line dk"></li>
 
-            <!-- Right side column. Contains the navbar and content of the page -->
-            <aside class="right-side">                
-                <!-- Content Header (Page header) -->
-                <section class="content-header">
-                    <h1>
-                        Blank page
-                        <small>Control panel</small>
-                    </h1>
-                    <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Blank page</li>
-                    </ol>
-                </section>
+              <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                <span>Components</span>
+              </li>
+              <li>
+                <a href class="auto">      
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                  <b class="badge bg-info pull-right">3</b>
+                  <i class="glyphicon glyphicon-th"></i>
+                  <span>Layout</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a href>
+                      <span>Layout</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="layout_app.html">
+                      <span>Application</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="layout_fullwidth.html">
+                      <span>Full width</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="layout_boxed.html">
+                      <span>Boxed layout</span>
+                    </a>
+                  </li>      
+                </ul>
+              </li>
+              <li>
+                <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                  <i class="glyphicon glyphicon-briefcase icon"></i>
+                  <span>UI Kits</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a href>
+                      <span>UI Kits</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui_button.html">
+                      <span>Buttons</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui_icon.html">
+                      <b class="badge bg-info pull-right">3</b>
+                      <span>Icons</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui_grid.html">
+                      <span>Grid</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui_widget.html">
+                      <b class="badge bg-success pull-right">13</b>
+                      <span>Widgets</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui_sortable.html">
+                      <span>Sortable</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui_portlet.html">
+                      <span>Portlet</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui_timeline.html">
+                      <span>Timeline</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui_jvectormap.html">
+                      <span>Vector Map</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                  <b class="label bg-primary pull-right">2</b>
+                  <i class="glyphicon glyphicon-list"></i>
+                  <span>Table</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a href>
+                      <span>Table</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="table_static.html">
+                      <span>Table static</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="table_datatable.html">
+                      <span>Datatable</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="table_footable.html">
+                      <span>Footable</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                  <i class="glyphicon glyphicon-edit"></i>
+                  <span>Form</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a href>
+                      <span>Form</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="form_element.html">
+                      <span>Form elements</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="ui_chart.html">
+                  <i class="glyphicon glyphicon-signal"></i>
+                  <span>Chart</span>
+                </a>
+              </li>
+              <li>
+                <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                  <i class="glyphicon glyphicon-file icon"></i>
+                  <span>Pages</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a href>
+                      <span>Pages</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="page_profile.html">
+                      <span>Profile</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="page_post.html">
+                      <span>Post</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="page_search.html">
+                      <span>Search</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="page_invoice.html">
+                      <span>Invoice</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="page_price.html">
+                      <span>Price</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="page_lockme.html">
+                      <span>Lock screen</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="page_signin.html">
+                      <span>Signin</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="page_signup.html">
+                      <span>Signup</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="page_forgotpwd.html">
+                      <span>Forgot password</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="page_404.html">
+                      <span>404</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
 
-                <!-- Main content -->
-                <section class="content">
+              <li class="line dk hidden-folded"></li>
+
+              <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">          
+                <span>Your Stuff</span>
+              </li>  
+              <li>
+                <a href="page_profile.html">
+                  <i class="icon-user icon text-success-lter"></i>
+                  <b class="badge bg-success pull-right">30%</b>
+                  <span>Profile</span>
+                </a>
+              </li>
+              <li>
+                <a href>
+                  <i class="icon-question icon"></i>
+                  <span>Documents</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- nav -->
+
+          <!-- aside footer -->
+          <div class="wrapper m-t">
+            <div class="text-center-folded">
+              <span class="pull-right pull-none-folded">60%</span>
+              <span class="hidden-folded">Milestone</span>
+            </div>
+            <div class="progress progress-xxs m-t-sm dk">
+              <div class="progress-bar progress-bar-info" style="width: 60%;">
+              </div>
+            </div>
+            <div class="text-center-folded">
+              <span class="pull-right pull-none-folded">35%</span>
+              <span class="hidden-folded">Release</span>
+            </div>
+            <div class="progress progress-xxs m-t-sm dk">
+              <div class="progress-bar progress-bar-primary" style="width: 35%;">
+              </div>
+            </div>
+          </div>
+          <!-- / aside footer -->
+        </div>
+      </div>
+  </aside>
+  <!-- / aside -->
+  <!-- / content-------------------------------------------------------------------------------- -- --> 
 
 
-                </section><!-- /.content -->
-            </aside><!-- /.right-side -->
-        </div><!-- ./wrapper -->
+ <!-- / content-------------------------------------------------------------------------------- -->
+  <!-- footer -->
+  <footer id="footer" class="app-footer" role="footer">
+        <div class="wrapper b-t bg-light">
+      <span class="pull-right">2.0.1 <a href ui-scroll="app" class="m-l-sm text-muted"><i class="fa fa-long-arrow-up"></i></a></span>
+        &copy; 2015 Copyright.
+    </div>
+  </footer>
+  <!-- / footer -->
 
+</div>
 
-        <!-- jQuery 2.0.2 -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-        <!-- Bootstrap -->
-        <script src="js/bootstrap.min.js" type="text/javascript"></script>
-        <!-- AdminLTE App -->
-        <script src="js/AdminLTE/app.js" type="text/javascript"></script>
+<script src="admin/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="admin/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="admin/js/ui-load.js"></script>
+<script src="admin/js/ui-jp.config.js"></script>
+<script src="admin/js/ui-jp.js"></script>
+<script src="admin/js/ui-nav.js"></script>
+<script src="admin/js/ui-toggle.js"></script>
 
-    </body>
+</body>
 </html>
