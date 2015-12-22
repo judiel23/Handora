@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="app app-header-fixed  ">
-  
+
   <!-- header -->
   <header id="header" class="app-header navbar" role="menu">
           <!-- navbar header -->
@@ -54,7 +54,7 @@
 
         <!-- link and dropdown -->
         <ul class="nav navbar-nav hidden-sm">
-          
+
           <li class="dropdown">
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
               <i class="fa fa-fw fa-plus visible-xs-inline-block"></i>
@@ -83,7 +83,7 @@
         </ul>
         <!-- / link and dropdown -->
 
-        <!-- search form 
+        <!-- search form
         <form class="navbar-form navbar-form-sm navbar-left shift" ui-shift="prependTo" data-target=".navbar-collapse" role="search" ng-controller="TypeaheadDemoCtrl">
           <div class="form-group">
             <div class="input-group">
@@ -158,7 +158,7 @@
               <li>
                 <a href>
                   <span class="badge bg-danger pull-right">30%</span>
-                  
+
                 </a>
               </li>
               <li>
@@ -199,7 +199,7 @@
               <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
                 <span class="clear">
                   <span class="block m-t-sm">
-                    <strong class="font-bold text-lt">Judiel Reyes</strong> 
+                    <strong class="font-bold text-lt">Judiel Reyes</strong>
                     <b class="caret"></b>
                   </span>
                   <span class="text-muted text-xs block">Administrador</span>
@@ -245,7 +245,7 @@
               <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
                 <span></span>
               </li>
-             
+
               <li>
                 <a href="mail.html">
                   <b class="badge bg-info pull-right">9</b>
@@ -259,7 +259,7 @@
                 <span>Components</span>
               </li>
               <li>
-                <a href class="auto">      
+                <a href class="auto">
                   <span class="pull-right text-muted">
                     <i class="fa fa-fw fa-angle-right text"></i>
                     <i class="fa fa-fw fa-angle-down text-active"></i>
@@ -288,7 +288,7 @@
                     <a href="layout_boxed.html">
                       <span>Boxed layout</span>
                     </a>
-                  </li>      
+                  </li>
                 </ul>
               </li>
               <li>
@@ -481,9 +481,9 @@
 
               <li class="line dk hidden-folded"></li>
 
-              <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">          
+              <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
                 <span>Your Stuff</span>
-              </li>  
+              </li>
               <li>
                 <a href="page_profile.html">
                   <i class="icon-user icon text-success-lter"></i>
@@ -525,7 +525,7 @@
       </div>
   </aside>
   <!-- / aside -->
-  <!-- / content-------------------------------------------------------------------------------- -- --> 
+  <!-- / content-------------------------------------------------------------------------------- -- -->
 
 
  <!-- / content-------------------------------------------------------------------------------- -->

@@ -1,4 +1,4 @@
-/* 
+/*
 
 */
 
@@ -3193,7 +3193,7 @@ fieldset[disabled] .i-checks input + i:before {
 
 .bg-primary.dker,
 .bg-primary .dker {
-  background-color: #5244a9;
+  background-color: #ffffff;
 }
 
 .bg-primary.bg,
@@ -3255,7 +3255,7 @@ fieldset[disabled] .i-checks input + i:before {
 }
 
 .bg-primary .text-lt {
-  color: #ffffff !important;
+  color: #5244a9 !important;
 }
 
 .bg-primary.auto .list-group-item,
