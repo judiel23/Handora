@@ -250,13 +250,13 @@
                 <a href="mail.html">
                   <b class="badge bg-info pull-right">9</b>
                   <i class="glyphicon glyphicon-envelope icon text-info-lter"></i>
-                  <span class="font-bold">Email</span>
+                  <span class="font-bold">Correo</span>
                 </a>
               </li>
               <li class="line dk"></li>
 
               <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
-                <span>Components</span>
+                <span>Componentes</span>
               </li>
               <li>
                 <a href class="auto">
@@ -266,17 +266,17 @@
                   </span>
                   <b class="badge bg-info pull-right">3</b>
                   <i class="glyphicon glyphicon-th"></i>
-                  <span>Layout</span>
+                  <span>Plantillas</span>
                 </a>
                 <ul class="nav nav-sub dk">
                   <li class="nav-sub-header">
                     <a href>
-                      <span>Layout</span>
+                      <span>Plantillas</span>
                     </a>
                   </li>
                   <li>
                     <a href="layout_app.html">
-                      <span>Application</span>
+                      <span>Editor de Plantillas</span>
                     </a>
                   </li>
                   <li>
@@ -298,12 +298,12 @@
                     <i class="fa fa-fw fa-angle-down text-active"></i>
                   </span>
                   <i class="glyphicon glyphicon-briefcase icon"></i>
-                  <span>UI Kits</span>
+                  <span>Kits de Interfaz</span>
                 </a>
                 <ul class="nav nav-sub dk">
                   <li class="nav-sub-header">
                     <a href>
-                      <span>UI Kits</span>
+                      <span>Kits de Interfaz</span>
                     </a>
                   </li>
                   <li>
@@ -358,27 +358,42 @@
                   </span>
                   <b class="label bg-primary pull-right">2</b>
                   <i class="glyphicon glyphicon-list"></i>
-                  <span>Table</span>
+                  <span>Contenido</span>
                 </a>
                 <ul class="nav nav-sub dk">
                   <li class="nav-sub-header">
                     <a href>
-                      <span>Table</span>
+                      <span>Contenido</span>
                     </a>
                   </li>
                   <li>
                     <a href="table_static.html">
-                      <span>Table static</span>
+                      <span>Imagenes</span>
                     </a>
                   </li>
                   <li>
                     <a href="table_datatable.html">
-                      <span>Datatable</span>
+                      <span>Texto</span>
                     </a>
                   </li>
                   <li>
                     <a href="table_footable.html">
-                      <span>Footable</span>
+                      <span>Video</span>
+                    </a>
+                  </li>
+                   <li>
+                    <a href="table_footable.html">
+                      <span>Tablas</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="table_footable.html">
+                      <span>Formularios</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="table_footable.html">
+                      <span>Graficos</span>
                     </a>
                   </li>
                 </ul>
@@ -389,28 +404,29 @@
                     <i class="fa fa-fw fa-angle-right text"></i>
                     <i class="fa fa-fw fa-angle-down text-active"></i>
                   </span>
-                  <i class="glyphicon glyphicon-edit"></i>
-                  <span>Form</span>
+                  <i class="glyphicon glyphicon-hand-up"></i>
+                  <span>Header</span>
                 </a>
                 <ul class="nav nav-sub dk">
                   <li class="nav-sub-header">
                     <a href>
-                      <span>Form</span>
+                      <span>header</span>
                     </a>
                   </li>
                   <li>
                     <a href="form_element.html">
-                      <span>Form elements</span>
+                      <span>header</span>
                     </a>
                   </li>
                 </ul>
               </li>
               <li>
                 <a href="ui_chart.html">
-                  <i class="glyphicon glyphicon-signal"></i>
-                  <span>Chart</span>
+                  <i class="glyphicon glyphicon-hand-down"></i>
+                  <span>Footer</span>
                 </a>
               </li>
+
               <li>
                 <a href class="auto">
                   <span class="pull-right text-muted">
@@ -418,27 +434,27 @@
                     <i class="fa fa-fw fa-angle-down text-active"></i>
                   </span>
                   <i class="glyphicon glyphicon-file icon"></i>
-                  <span>Pages</span>
+                  <span>Paginas</span>
                 </a>
                 <ul class="nav nav-sub dk">
                   <li class="nav-sub-header">
                     <a href>
-                      <span>Pages</span>
+                      <span>Paginas</span>
                     </a>
                   </li>
                   <li>
                     <a href="page_profile.html">
-                      <span>Profile</span>
+                      <span>Perfil</span>
                     </a>
                   </li>
                   <li>
                     <a href="page_post.html">
-                      <span>Post</span>
+                      <span>Públicaciones</span>
                     </a>
                   </li>
                   <li>
                     <a href="page_search.html">
-                      <span>Search</span>
+                      <span>Busquedas</span>
                     </a>
                   </li>
                   <li>
@@ -533,7 +549,7 @@
   <footer id="footer" class="app-footer" role="footer">
         <div class="wrapper b-t bg-light">
       <span class="pull-right">2.0.1 <a href ui-scroll="app" class="m-l-sm text-muted"><i class="fa fa-long-arrow-up"></i></a></span>
-        &copy; 2015 Copyright.
+        &copy; www.regaze.com.ve 2015 Copyright .
     </div>
   </footer>
   <!-- / footer -->
