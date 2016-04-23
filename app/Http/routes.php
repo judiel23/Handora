@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/handora', function () {
+Route::get('/handora/', function () {
     return view('welcome');
 });
 Route::get('/handora/handmin', function () {
